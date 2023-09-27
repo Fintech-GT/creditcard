@@ -1,0 +1,15 @@
+.extension {
+  border-radius: 10px;
+}
+
+.App {
+  color: white;
+  text-align: center;
+  width: 600px;
+  height: 300px;
+  background-color: purple;
+  margin: 0;
+  display: grid;
+  grid-template-columns: "3fr 1fr";
+}
+

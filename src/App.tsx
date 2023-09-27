@@ -1,24 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import CardRecommendation from "./components/CardRecommendation";
+import CardInformation from "./components/CardInformation";
+import { useEffect, useState } from "react";
+import "./assets/App.css";
+import Card from "./types/Card";
 
 function App() {
+  // const card = useState();
+  const card: Card = {
+    image: "https://pngimg.com/d/credit_card_PNG118.png",
+    name: "Visa Platinum",
+    amountSpent: 100
+  };
+
+  useEffect(() => {
+    // GET best card here
+  })
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <CardRecommendation card={card}></CardRecommendation>
+      <CardInformation card={card}></CardInformation>
     </div>
   );
 }
